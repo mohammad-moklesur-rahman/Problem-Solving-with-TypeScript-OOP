@@ -33,3 +33,11 @@ const formatCoordinate = (coordinates: readonly [number, number, string]): strin
     return `Location: ${locationName} (${latitude}, ${longitude})`
 }
 const result3 = formatCoordinate([23.81, 90.41, "Dhaka"]);
+
+
+// * Problem 4
+
+const concatenateArrays = <T>(...arrays: T[][]): T[] => {
+    return arrays.flat();
+}
+const result4 = concatenateArrays([1, 2], [3, 4], [5]);
