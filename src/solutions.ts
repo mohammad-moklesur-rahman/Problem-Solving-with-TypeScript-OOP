@@ -41,3 +41,22 @@ const concatenateArrays = <T>(...arrays: T[][]): T[] => {
     return arrays.flat();
 }
 const result4 = concatenateArrays([1, 2], [3, 4], [5]);
+
+
+// * Problem 5
+
+interface Course {
+    title: string,
+    students: number,
+    isPublished: boolean
+}
+const getPopularCourses = (Courses: Course[], minStudents: number) => {
+    return Courses.filter(course => course.students > minStudents && course.isPublished);
+}
+const courses = [
+    { title: "TypeScript Mastery", students: 120, isPublished: true },
+    { title: "Draft Course", students: 200, isPublished: false },
+    { title: "Basic HTML", students: 45, isPublished: true },
+    { title: "Next.js Pro", students: 85, isPublished: true }
+];
+const result5 = getPopularCourses(courses, 80);
