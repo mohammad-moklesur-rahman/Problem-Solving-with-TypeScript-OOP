@@ -24,3 +24,12 @@ const processInput = (value: string | number | boolean) => {
     }
 }
 const result2 = processInput("  TypeScript  ");
+
+
+// * Problem 3
+
+const formatCoordinate = (coordinates: readonly [number, number, string]): string => {
+    const [latitude, longitude, locationName] = coordinates;
+    return `Location: ${locationName} (${latitude}, ${longitude})`
+}
+const result3 = formatCoordinate([23.81, 90.41, "Dhaka"]);
